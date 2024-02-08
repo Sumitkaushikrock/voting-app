@@ -1,0 +1,11 @@
+apiVersion: v1
+metadata:
+  name: db
+kind: Service
+spec:
+  ports:
+    - port: 5432
+      targetPort: 5432
+  selector:
+    appName: post-gres
+  type: ClusterIP
